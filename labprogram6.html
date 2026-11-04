@@ -10,32 +10,39 @@
             justify-content: center;
             align-items: center;
         }
+
         input,
         button {
             padding: 8px;
             margin: 5px;
             border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         button {
             background: rgb(117, 117, 172);
             width: 100px;
             border-radius: 50px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             color: white;
             border: none;
         }
-        button:hover{
+
+        button:hover {
             background: rgb(102, 102, 173);
         }
-        .cal{
+        .button{
+            margin-left: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .cal {
             /* height: 900px; */
             background-color: rgb(252, 190, 75);
-            width: 600px;
-            border:2px solid black;
+            width: 400px;
+            border: 2px solid black;
             border-radius: 50px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -46,14 +53,16 @@
         <input id="a" type="number" placeholder="First number">
         <input id="b" type="number" placeholder="Second number">
         <br>
-        <button onclick="cal('+')">Sum</button>
-        <button onclick="cal('-')">Difference</button>
-        <button onclick="cal('*')">Product</button>
-        <button onclick="cal('/')">Quotient</button>
-        <button onclick="cal('%')">Remainder</button>
-        <button onclick="cal('**')">Power</button>
-        <button onclick="cal('sqrt')">Square Root</button>
-        <button onclick="cal('square')">Square</button>
+        <div class="button">
+            <button onclick="cal('+')">Sum</button>
+            <button onclick="cal('-')">Difference</button>
+            <button onclick="cal('*')">Product</button>
+            <button onclick="cal('/')">Quotient</button>
+            <button onclick="cal('%')">Remainder</button>
+            <button onclick="cal('**')">Power</button>
+            <button onclick="cal('sqrt')">Square Root</button>
+            <button onclick="cal('square')">Square</button>
+        </div>
         <p id="result">Result:</p>
     </div>
     <script>
